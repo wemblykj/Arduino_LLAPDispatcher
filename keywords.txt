@@ -1,0 +1,25 @@
+#######################################
+# Syntax Coloring Map For LEDDriver
+#######################################
+
+#######################################
+# Class (KEYWORD1)
+#######################################
+
+IController	    KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+# methods names in common
+
+# IController interface
+reset	        KEYWORD2
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+#Resolution          LITERAL1
