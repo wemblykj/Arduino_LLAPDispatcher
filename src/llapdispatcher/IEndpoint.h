@@ -12,15 +12,16 @@ public:
   virtual const char* name() const = 0;
   
   //! Deliver a payload from an LLAP message to this endpoint
-  virtual const char* deliverPayload(const char* payload) = 0;
+  virtual const char* deliverPayload(char* payload) = 0;
   
   //! Returns any pending payloads to be sent out over LLAP for this endpoint
   /**
     * Should ideally be polled in a single frame until there are no more pending messages
     *
-    * \return pointer to the next message or nullptr if no more messages are pending
+    * \param buffer a 9 byte LLAP payload buffer
+    * \return true if there is a payload to be delivered
     */
-  virtual const char* pendingPayload() = 0;
+  virtual bool pendingPayload(char* payloadBuffer) = 0;
 };
 
 } // namespace LLAPDispatcher

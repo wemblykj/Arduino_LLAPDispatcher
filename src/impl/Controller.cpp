@@ -8,7 +8,7 @@ bool Controller::dispatch(const char* message) {
   
 }
 
-const char* Controller::pending() {
+bool Controller::pending(char* messageBuffer) {
   
 }
 

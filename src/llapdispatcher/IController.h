@@ -19,9 +19,10 @@ public:
   /**
     * Should ideally be polled in a single frame until there are no more pending messages
     *
-    * \return pointer to the next message or nullptr if no more messages are pending
+    * \param buffer a 12 byte LLAP message buffer
+    * \return true if there is a payload to be delivered
     */
-  virtual const char* pending() = 0;
+  virtual bool pending(char* messageBuffer) = 0;
   
   //! Add a new endpoint to the dispatcher
   /**
