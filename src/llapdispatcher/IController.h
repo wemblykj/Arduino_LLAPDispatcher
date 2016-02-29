@@ -6,12 +6,14 @@
 
 namespace LLAPDispatcher {
 
+class IEndpoint;
+
 class IController
 {
 public:
   //! Dispatch an incoming message from LLAP
   /**
-    * \return true if the message was succesfully dispatched and therefore handled
+    * \return true if the message was successfully dispatched and therefore handled
     */
   virtual bool dispatch(const char* message) = 0;
   
@@ -33,12 +35,11 @@ public:
   //! Remove an endpoint
   virtual void removeEndpoint(const IEndpoint* endpoint) = 0;
   
-  //! Broadcast all endpoints over LLAP
+  //! Broadcast all responding endpoints
   /**
-    * TBD
-    * All messages will be added to the pending queue. \see pending()
+    * All responding endpoints will be queried and their resultant messages added to the pending queue. \see pending()
     */
-  virtual void broadcastEndpoints() = 0;
+  virtual void broadcastResponders() = 0;
   
   //! Reset the controller state
   /**

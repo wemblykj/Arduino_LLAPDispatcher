@@ -6,6 +6,8 @@
 
 namespace LLAPDispatcher {
 
+class IPayload;
+
 class IMessage
 {
 public:
@@ -16,10 +18,10 @@ public:
   virtual const char* recipient() const = 0;
   
   // an identifies the destination endpoint
-  virtual const char* endpointId() const = 0;
+  virtual const char* nodeId() const = 0;
   
   //! the payload associated with the message
-  virtual const char* payload(char* payload) = 0;
+  virtual IPayload* payload() = 0;
 };
 
 } // namespace LLAPDispatcher
