@@ -1,5 +1,5 @@
 /* IResponder interface
- * Paul Wightmore 2015
+ * Paul Wightmore 2016
  */
 #ifndef _LLAPDISPATCHER_IRESPONDER_h
 #define _LLAPDISPATCHER_IRESPONDER_h

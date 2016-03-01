@@ -1,15 +1,17 @@
 /* IEndpoint interface
- * Paul Wightmore 2015
+ * Paul Wightmore 2016
  */
 #ifndef _LLAPDISPATCHER_INODE_h
 #define _LLAPDISPATCHER_INODE_h
 
 namespace LLAPDispatcher {
 
-class IEndpoint
+//! A uniquely identifiable node
+class INode
 {
 public:
-  virtual const char* name() const = 0;
+  //! A unique id for this node
+  virtual const char* id() const = 0;
 };
 
 } // namespace LLAPDispatcher

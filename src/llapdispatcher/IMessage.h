@@ -1,5 +1,5 @@
 /* IEndpoint interface
- * Paul Wightmore 2015
+ * Paul Wightmore 2016
  */
 #ifndef _LLAPDISPATCHER_IMESSAGE_h
 #define _LLAPDISPATCHER_IMESSAGE_h
@@ -12,12 +12,12 @@ class IMessage
 {
 public:
   // the sender of an incoming message
-  virtual const char* sender() const = 0;
+  virtual const char* senderId() const = 0;
   
   // the recipient of an outgoing message
-  virtual const char* recipient() const = 0;
+  virtual const char* recipientId() const = 0;
   
-  // an identifies the destination endpoint
+  // the node id associated with this message
   virtual const char* nodeId() const = 0;
   
   //! the payload associated with the message
