@@ -6,7 +6,7 @@
 # Class (KEYWORD1)
 #######################################
 
-IController	    KEYWORD1
+IController	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
@@ -15,11 +15,11 @@ IController	    KEYWORD1
 # methods names in common
 
 # IController interface
-reset	        KEYWORD2
+reset	KEYWORD2
 
 
 #######################################
 # Constants (LITERAL1)
 #######################################
 
-#Resolution          LITERAL1
+#Resolution	LITERAL1
